@@ -87,6 +87,10 @@ app.post('/weather', async (req, res) => {
   }
 });
 
+app.get('/health', (req, res) => {
+  res.send('Running OK...');
+});
+
 // Optional GET route for quick testing via query string
 app.get('/weather', async (req, res) => {
   req.body = req.body || {};
